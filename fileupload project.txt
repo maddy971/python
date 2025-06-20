@@ -1,0 +1,47 @@
+1 in models.py 
+     photo = models.FileField(upload_to='documents/')
+2 add these at the starting views
+from django.core.files.storage import FileSystemStorage
+import os
+from chillymarket.settings import BASE_DIR
+
+3 add this line in form tag   enctype="multipart/form-data"
+4 change input type="text" to type="file" and give the filed name as myfile
+5. add this line in views.py file
+
+  example:
+   if request.method=="POST" and request.FILES['myfile']: 
+         name = request.POST.get('t1')
+        address = request.POST.get('t2')
+        city = request.POST.get('t3')
+        myfile=request.FILES['myfile']
+
+        fs = FileSystemStorage()
+        filename = fs.save(myfile.name, myfile)
+        uploaded_file_url = fs.url(filename)
+        pat = os.path.join(BASE_DIR, '/media/' + filename)
+
+       staff.objects.create(name=name,address=address,city=city,email=email,mobile=mobile,photo=myfile)
+
+6.add thses lines in setings.py file at the last
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+7 add these line in url
+
+import add these lines
+from django.conf import settings
+from django.conf.urls.static import static
+
+at last or end of  file add these lines
+
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+
+
+
+   

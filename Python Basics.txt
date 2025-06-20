@@ -1,0 +1,215 @@
+.LOG												
+
+												<--- 6/12/2024 --->
+
+Conditional Statements : Python supports if conditions. statements are true the program executes true block else executes else part
+
+syntax : if(condition):
+true
+else:
+false code
+
+WAP to read value from user display the same.
+
+input() : this method is used to read value from user.
+
+1) wap to read a number and check is it +ve or -ve.
+2) wap to check the given number is even or odd.
+3) wap to read year from the user and check is it a leap year.
+4) wap to read a number and check is the number is divisible by 5.
+5) wap to find the greatest of three numbers.
+6) accept marks from the user and display the result.
+7) wap to read three sides of a triangle and display what type of triangle it is?
+8) wap to display the greatest of 5 numbers.
+9) wap to read three numbers and display second largest number.
+10) wap to read a number if a number divides by 3 display 'Hii', if number divides by 5 display 'Hello', if a number divides by 3 and 5 display 'Hii Hello'.
+
+* Loops : to repeat the same statements again and again loops are used in loops mainly two types :
+
+i) for loop : when we know the number of repetition we use for loop. 
+   in for loop we use keyword 'in' to check the existence of a value.
+   and we use range method which comes with 3 different parameters :-
+
+	a) for i in range(int) : range with one parameter, when we pass a single parameter it starts the loop from the zero till the 		   parameter value not the parameter value.
+		example : for i in range(10):
+				print(i) //it prints 0-9
+
+	b) for i in range(int,int) : range with a two parameter. when we pass two parameters first parameter to start the loop, and second 	   parameter to specify the end. 
+		example : for i in range(5,15):
+				print(i) // it prints only 5-15
+
+	c) for i in range(int,int,int) : first parameter for start value, second parameter for end value and third parameter for inc/dec.
+		example : for i in range(1,10,2)
+				print(i) // it print 1,3,5,7,9
+
+	Practice these programs : 
+	1> wap to print sum of 10 numbers.
+	2> wap to display all even numbers from 1 to 10.
+	3> wap to display the table of 3 in two different ways.
+	4> wap to find the factorial of 5.
+
+ 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+													<--- 7/12/2024 --->
+
+wap to display for the range 1 - 30. if the number divides by 3 display 'your name', if a number divides by 5 display 'address', if a number divides by 3 and 5 display 'name and address'.
+
+ii) while loop : when we don't know the number of repetition we use for loop.
+	syntax: start
+		while(condition):
+			----
+			----
+			----
+		incr/decr
+
+wap to display the numbers from 1 - 10 using the while loop.
+wap to read a number and display the table for the same.
+wap to read a number and display individual digits of given number. for example if we give 532 it should display 2 3 5.
+wap to read a number and display individual digits sum.
+wap to reverse a number.
+
+
+String Class : its a built in class, this class is design to manipulate string data. following are the some of the string functions:-
+
+i) upper : converts a string to uppercase.
+ii) lower : converts a string to lowercase.
+iii) islower : return a Boolean value. true or false.
+iv) isupper : return a Boolean value. true or false.
+v) endswith, startswith : to check starting and ending string content.
+vi) capitalize : converts first character of a string to upper case.
+vii) trim : removes unwanted spaces from left and right.
+viii) reverse : reverse a string.
+
+Math class : This class is introduced to work with mathematical operations. to work with this we had to import math module. following are the some of the methods which are belongs to math class.
+
+i) ceil : converts a fraction value to its nearest highest integer.
+ii) floor : converts a fraction value to its nearest integer.
+iii) sqrt : to find the square root of a number.
+iv) fabs : converts -ve number to +ve number.
+v) factorial : finds factorial of a given number.
+
+wap to demonstrate Math functions.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+											<--- 9/12/2024 --->
+
+Collection classes : are introduced to store the data in run time or dynamically. this data available only at the time of execution. once the execution completes data will be removed from the memory. following are the dynamic collection classes:
+
+i)list : its used to store any type of data. it stores the data with the help of Index number list are used list are defined define using square brackets a square bracket following example demonstrate list :
+
+ii) tuples : its a dynamic collection class this class defines only constant values. once the tuple is define it cannot be changed. its mainly designed to store constants. there is no methods for tuple to manipulate the data. in tuples we have the property by name length. which will count the number of elements in a tuple. tuples are define using a () round bracket.
+
+iii) set : set is a dynamic collection class. it stores the data by name itself. adding and removing of data is done. by using name. in set we can use mathematical operations it supports all set operations of maths (union, intersection, difference), it can contains only unique values. 
+
+To delete the records from a set:
+i) clear : it will clear entire set.
+ii) pop : it will remove the first element.
+iii) discard : its used to remove one element if element found it will be deleted else it will move to next line. it will not show any errors.
+iv) remove : this method is also used to remove the element. if the matching found it will deleted there is no matching it will raise an error.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Dictionary : dictionary are used to store in the form of key and value pairs. key represents the unique values where as value may be duplicated. dictionaries are defined using the curly brackets. 
+wap to show dictionary values by using format specifiers.
+
+Functions : functions are reusable code. in python functions are defined by using a keyword 'def' followed by a function name we can define simple functions and parameterized functions.
+
+Modules : if a file contains more than one function that file will be called as module. modules are used to access the functions outside the files to access these functions in other files we need to import the module followed by an alias name. 
+syntax: import module_name as object_name or alias_name;
+
+using the alias name or object name we can access the functions.
+
+Dec 10, 2024
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Exception Handling : to work with exceptions python introduced exception handling to trace the errors faster which will avoid abnormal termination of a program. to work with exception handling we introduced 3 keywords : 
+
+i) try : we are going to write code which may cause errors. if error found control will be passed to the except block this will avoid the abnormal termination of program.
+
+ii) except : this keyword is equivalent to catch. it will read the error and display an appropriate message.
+  
+iii) finally : its a guarantied block which will execute irrespective of errors. if the error traced it will display the error message. if there is no errors control directly passes to finally block.
+
+in python else keyword is introduced in exception handling to display program has no errors and it executed completely.
+
+iv) raise : its used to display our own error messages with respective our criteria.
+
+classes and object : in python we can create a classes by using a keyword class. classes are dynamic we can decide the member variables at the time of execution after defining a class we can use a pass keyword. which tells the interpreter member variables should be defined in run time. 
+
+Constructor : in python we are going to define the constructor with the help of --init--
+syntax: __init__()self,p1,p2,__):
+
+in the above syntax init is a built in method self represent the present class. after that parameters these parameters will be initialised to the local variables all local variables defined in the left side, prefixed with the self keyword. these variables will be initialised with the parameters 
+
+syntax : self.name=p1
+         self.dept=p2
+
+Inheritance : python supports all types of inheritances.
+	following are the some of the syntaxes : 
+	i) simple :      class a
+		    
+		         class b(a)
+
+	ii) Multilevel : class a
+
+			 class b(a)
+
+			 class c(b)
+	
+	iii) Multiple :  class a
+
+			 class b
+
+			 class c(a,b)
+
+02:17 PM 11-12-2024
+
+
+when we create a project with a project name 2 folders will be created one within the other.
+first folder contains total 2 files and 1 folder. folder is also same name as outer folder.
+click on inner folder we can see 5 files: ( init.py, asgi.py, settings.py, url.py, wsgi.py )
+
+i) __init__.py : its a default constructor we are going to define the database driver.
+ii) asgi.py & wsgi.py : are not used in project.
+iii) settings.py : where we are going to define the configuration of our project and database connectivity details.
+iv) url.py : we are going to define the url's details, which provides address of pages or functions to be loaded. 
+
+07:53 PM 14-12-2024
+
+python project architecture : when we create a project with the help of Django admin command it going to create 2 2 folders by project name for example. if we created a project by owner we get owner folder within that one more owner folder with 5 files.
+
+to create app use the following command : python manage.py, startapp app_name, this will create a new folder with a appname. this folder contains following folder and files : 
+
+1) migration : this folder contains the files which are used to create tables and it contains a file which by default.
+2) modules.py : this file is used to create tables with the help of NoSQL concepts. all tables are created with the help of classes. for every attribute of a table we are going to define variable with the help of NoSQL datatypes. once we define a classes, we use following commands to create tables physically. python manage.py makemigration-> this will create sql structure for tables and this file will placed in migrations folder python manage.py migrate-> this will transfer the sql statements to MySQL and the real time classes will be created.
+
+note : don't use this command once the tables are migrated, f we use again and again tables will be recreated and data will be losed.
+
+3)views.py : this file contains the code in the form of functions this is a single page programming. whatever the connectivity's business and presentation implementation is provided in this file. for every function creation we need to register the function name in path.py file 
+
+Templates : In python templates are nothing but html files or project related files will be stored in this folder itself.
+static folder : this folder contains css, javasccript, images folder, template and static folder are created in the customer app 
+select customer app folder --> right click --> new directory --> give the name as templates(lower case). again selects the customer folder right click new directory. create directory by name 'static'.
+
+select the template folder --> right click --> select html file --> give a name as 'index' and press enter. a new file will be created with name index.html with a basic structure of html file.
+
+02:49 PM 17-12-2024
+
+
+DATABASE CONNECTIVITY USING PYTHON :
+1) install xampp and create a database by name pycollege.
+2) open project folder in PyCharm. open the setting folder and configure the database credentials in database option approx (77 line). 
+3) change the engine name to django.db.backends.mysql.
+	name: pycollege 
+	user: root
+	password: ""
+	host: '127.0.0.1'
+	port: '3306'
+
+03:12 PM 19-12-2024
+
+
+
+02:09 PM 30-01-2025

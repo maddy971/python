@@ -1,0 +1,64 @@
+step 1
+
+open anyview.html file
+
+step 2 
+add this line to select rec and update
+
+     <a href="{% url 'eng_update' r.id %}">Update </a>
+
+step 3
+
+open view.py file and add new method for update
+
+def eng_update(request,pk):
+    userdict = EngineerInfo.objects.filter(id=pk).values()
+    return render(request,'engineeredit.html',{'userdict': userdict})
+
+step 3 a
+add this line in urls
+ url('eng_update/(?P<pk>\d+)/$', views.eng_update, name='eng_update'),
+
+step 4
+
+create a new html file by just copying the first form which is used for adding values to table 
+
+add the following code to html file
+
+<form method="post" action="{% url 'engineerdb' %}" class="box">
+    {% csrf_token %}
+    {% for r in userdict %}
+    <h1>Engineer Information</h1>
+       <table width="300">
+           <input type="hidden" name="id" value="{{r.id}}">
+        <tr>
+            <td>Engineer Name</td>
+            <td>
+                <input type="text" name="t1" placeholder="Engineer Name" required value="{{r.eng_name}}">
+            </td>
+        </tr>
+   {% endfor %}
+</form>
+
+step 5 
+add new method to view to update  values to table
+
+def update_payment(request):
+    if request.method=="POST":
+        id=request.POST.get('id')
+        Request_id = request.POST.get('t1', '')
+        Date = request.POST.get('t2', '')
+        No_of_seats = request.POST.get('t3', '')
+        costperseat = request.POST.get('t4', '')
+        total = request.POST.get('t5', '')
+        status = request.POST.get('t6', '')
+        Payment.objects.filter(id=id).update(Request_id=Request_id, Date=Date, No_of_seats=No_of_seats, Cost_per_seat=costperseat,
+                       Total=total, status=status)
+        userdict = Payment.objects.all()
+        return render(request, 'viewpayment.html', {'userdict': userdict})
+
+
+
+
+
+
